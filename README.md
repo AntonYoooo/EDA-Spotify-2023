@@ -8,4 +8,4 @@ This repository includes the documentation and analytical application revolving 
 
 
 ## Revision Timeline 
-### 0.1 - 10/30/2024 
+### Version 0.1 - 10/30/2024 
