@@ -6,6 +6,8 @@ The Dataset "Most Streamed Spotify Songs 2023" is a csv file that contains the l
 Perform Data Analysis to determine the correlation between data or attributes, uncover trends, and examine the relationship between variables, in order to formulate a conclusion as to how a track is likely to become popular. 
 
 ## Phase 1: Start + Identifying/Analyzing the initial Dataset
+In this part, we simply analyze the initial dataset and check whether there are any missing values or errors that may hinder the coding process. 
+
 ##### 1 . a . ) In order to start, it is essential to first declare and import the necessary libraries in order for the program to work
 ```python
 #syntax for accessing pandas library in python
@@ -56,6 +58,7 @@ print("The Amount of Tracks with a duplicate are:", Duplicates)
 ```
 ### Output: 
 ![image](https://github.com/user-attachments/assets/95e04788-4574-4f14-84bd-881a41723106)
+
 Note: According to the output, there are 50 blanks in the "in_shazam_charts" column and 95 blanks in the "key" column. Additionally, there are currently 4 tracks that have been duplicated within the dataset. 
 
 ##### 1 . e . ) To further prove that there are duplicates within the track, the following code is then implemented: 
@@ -69,6 +72,35 @@ duplicate_rows
 ![image](https://github.com/user-attachments/assets/aaa14d47-e2f1-488c-9720-6398d662a20b)
 
 ## Phase 2: Data Cleaning 
+In this part, we apply Data Cleaning in order to ensure the accuracy and consistency of the dataset. 
+
+##### 2 . a . ) To Start cleaning the data, we first remove the rows with empty or missing values within their columns. Alongside this, we'll also convert the 3 incorrect datatypes into their respective type (Numeric)  
+```python
+#Creates a variable named new_df which removes all rows with incomplete data
+new_df = df.dropna(how='any', axis=0) 
+
+#Reassigns the value with its duplicates at columns track_name and artist(s)_name removed
+new_df = new_df.drop_duplicates(subset = ['track_name', 'artist(s)_name']) 
+
+#Converts column 'stream' into numerical data type while turning garbage values into NaN simultaneously 
+new_df['streams'] = pd.to_numeric(new_df['streams'], errors = 'coerce') 
+
+#Converts data type of columns 'in_deezer_playlists', and 'in_shazam_charts' into numeric 
+new_df['in_deezer_playlists'] = pd.to_numeric(new_df['in_deezer_playlists'], errors = 'coerce') 
+new_df['in_shazam_charts'] = pd.to_numeric(new_df['in_shazam_charts'], errors = 'coerce') 
+
+#Removes the rows with NaN values in the column "stream"
+new_df = new_df.dropna(subset=['streams'])
+new_df
+``` 
+Output: 
+![image](https://github.com/user-attachments/assets/3f916836-b2ba-4d2a-98da-55afcb64eede)
+
+Note: After cleaning the data, we are then left with 813 rows and 24 columns. 
+
+## Phase 3: Basic Descriptive Statistics 
+
+
 
 
 ## Revision Timeline 
