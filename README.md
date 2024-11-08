@@ -5,7 +5,7 @@ The Dataset "Most Streamed Spotify Songs 2023" is a csv file that contains the l
 ## Goal 
 Perform Data Analysis to determine the correlation between data or attributes, uncover trends, and examine the relationship between variables, in order to formulate a conclusion as to how a track is likely to become popular. 
 
-### Phase 1: Start + Identifying/Analyzing the initial Dataset
+## Phase 1: Start + Identifying/Analyzing the initial Dataset
 ##### 1 . a . ) In order to start, it is essential to first declare and import the necessary libraries in order for the program to work
 ```python
 #syntax for accessing pandas library in python
@@ -29,7 +29,7 @@ df
 
 Note: In the image provided, there are a total of 953 rows and 24 columns. 
 
-##### 1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the the datatypes between the columns through this code: 
+##### 1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the datatypes between the columns through this code: 
 ```python 
 # Identifies the data type of the columns 
 df_DT = df.dtypes
@@ -37,6 +37,7 @@ df_DT
 ``` 
 ### Output: 
 ![image](https://github.com/user-attachments/assets/8307e5ef-caa7-41cf-a31b-431571e9135b)
+
 Note: It can be observed that some of the columns in the dataset such as streams, in_deezer_playlists, and in_shazam charts are declared as "object", in which they should be numeric since they're values are numerical. 
 
 ##### 1 . d . )  After checking out the data types, we then now proceed in checking whether incomplete elements or duplicates are present within the dataset. 
@@ -67,7 +68,7 @@ duplicate_rows
 ### Output: 
 ![image](https://github.com/user-attachments/assets/aaa14d47-e2f1-488c-9720-6398d662a20b)
 
-### Phase 2: Data Cleaning 
+## Phase 2: Data Cleaning 
 
 
 ## Revision Timeline 
