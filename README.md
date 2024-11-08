@@ -63,6 +63,8 @@ Note: According to the output, there are 50 blanks in the "in_shazam_charts" col
 
 **1 . e . ) To further prove that there are duplicates within the track, the following code is then implemented:** 
 ```python
+# Identifies the rows with duplicates on the 'track_name' and 'artist(s)_name' column
+# Keep = False makes it so that all duplicates and its original entries will be included
 duplicate_rows = df[df.duplicated(['track_name', 'artist(s)_name'], keep=False)]
 
 # Display the duplicate rows
