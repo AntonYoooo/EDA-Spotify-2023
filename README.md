@@ -8,7 +8,7 @@ Perform Data Analysis to determine the correlation between data or attributes, u
 ## Phase 1: Start + Identifying/Analyzing the initial Dataset
 In this part, we simply analyze the initial dataset and check whether there are any missing values or errors that may hinder the coding process. 
 
-##### 1 . a . ) In order to start, it is essential to first declare and import the necessary libraries in order for the program to work
+**1 . a . ) In order to start, it is essential to first declare and import the necessary libraries in order for the program to work**
 ```python
 #syntax for accessing pandas library in python
 import pandas as pd 
@@ -19,7 +19,7 @@ import seaborn as sns
 #syntax for accessing numpy library
 import numpy as np
 ```
-##### 1 . b . ) After declaring the libraries, the dataset is then accessed. Note that in this case, the csv file contains characters that are undefined or unrecognizable by the Panda's default encoding (UTF-8), which is why encoding latin1 is used for this case. 
+**1 . b . ) After declaring the libraries, the dataset is then accessed. Note that in this case, the csv file contains characters that are undefined or unrecognizable by the Panda's default encoding (UTF-8), which is why encoding latin1 is used for this case.**
 ```python
 #the syntax encoding ='latin' ensures that no form of "UnicodeDecodeError" occurs when loading a file that potentially contains characters invalid in UTF-8 (Pandas' Default encoding)
 df = pd.read_csv('spotify-2023.csv', encoding='latin') 
@@ -31,7 +31,7 @@ df
 
 Note: In the image provided, there are a total of 953 rows and 24 columns. 
 
-##### 1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the datatypes between the columns through this code: 
+**1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the datatypes between the columns through this code:** 
 ```python 
 # Identifies the data type of the columns 
 df_DT = df.dtypes
@@ -42,7 +42,7 @@ df_DT
 
 Note: It can be observed that some of the columns in the dataset such as streams, in_deezer_playlists, and in_shazam charts are declared as "object", in which they should be numeric since they're values are numerical. 
 
-##### 1 . d . )  After checking out the data types, we then now proceed in checking whether incomplete elements or duplicates are present within the dataset. 
+**1 . d . )  After checking out the data types, we then now proceed in checking whether incomplete elements or duplicates are present within the dataset.** 
 ```python
 # Creates a variable 'Incomplete_sets' which will store the sum of the rows with incomplete data
 Incomplete_sets = pd.isnull(df).sum()
@@ -61,7 +61,7 @@ print("The Amount of Tracks with a duplicate are:", Duplicates)
 
 Note: According to the output, there are 50 blanks in the "in_shazam_charts" column and 95 blanks in the "key" column. Additionally, there are currently 4 tracks that have been duplicated within the dataset. 
 
-##### 1 . e . ) To further prove that there are duplicates within the track, the following code is then implemented: 
+**1 . e . ) To further prove that there are duplicates within the track, the following code is then implemented:** 
 ```python
 duplicate_rows = df[df.duplicated(['track_name', 'artist(s)_name'], keep=False)]
 
@@ -74,7 +74,7 @@ duplicate_rows
 ## Phase 2: Data Cleaning 
 In this part, we apply Data Cleaning in order to ensure the accuracy and consistency of the dataset. 
 
-##### 2 . a . ) To Start cleaning the data, we first remove the rows with empty or missing values within their columns. Alongside this, we'll also convert the 3 incorrect datatypes into their respective type (Numeric)  
+**2 . a . ) To Start cleaning the data, we first remove the rows with empty or missing values within their columns. Alongside this, we'll also convert the 3 incorrect datatypes into their respective type (Numeric)**  
 ```python
 #Creates a variable named new_df which removes all rows with incomplete data
 new_df = df.dropna(how='any', axis=0) 
@@ -99,7 +99,7 @@ new_df
 Note: After cleaning the data, we are then left with 813 rows and 24 columns. 
 
 ## Phase 3: Basic Descriptive Statistics 
-##### 3 . a . ) 
+**3 . a . )**
 ```python
 #Converts the stream column to numeric in order to access the column without errors
 #Uses .loc in order to avoid the "SettingWithCopyWarning", by only modifying the new_df instead of the original df
@@ -121,7 +121,7 @@ table_m
 ### Output: 
 ![image](https://github.com/user-attachments/assets/fddc801a-e3db-4b06-8d49-6726b6f62c0f)
 
-##### 3 . b . ) 
+**3 . b . )** 
 ```python
 # To Identify what makes the outliers of the column 'released_year', we determine the Upper Boundary and Lower Boundary of that column
 boundary_year = new_df['released_year'] 
@@ -156,7 +156,7 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/edc3793c-5ff9-4c15-8432-6afc15c231c1)
 
-##### 3. c. ) 
+**3. c. )** 
 ```python
 # Determine the Upper Boundary and Lower Boundary of Artist Count
 boundary_artistcount = new_df['artist_count'] 
@@ -191,7 +191,7 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/8d36c24e-72d2-445c-85a6-0a61b9d0a864)
 
 ## Phase 4: Top Performers 
-##### 4. a. ) 
+**4. a. )** 
 ```python
 #Create variable x to store the top 5 tracks with the largest streams
 x = new_df.nlargest(5, 'streams')
@@ -202,7 +202,7 @@ table_streams
 ### Output: 
 ![image](https://github.com/user-attachments/assets/fe6fdc85-e58e-4122-8c80-5111f0c37e8a)
 
-##### 4. b. ) 
+**4. b. )** 
 ```python 
 # Create a variable "split" which will contain the splitted and expanded version of the column 'artist(s)_name'
 # This will identify and expand the entries in the "artist(s)_name" column seperated by a comma "," in the dataset
@@ -223,7 +223,7 @@ table_frequency
 ![image](https://github.com/user-attachments/assets/3dd75c26-5a82-43d1-983c-7fa4151a2ac4)
 
 ## Phase 5: Temporal Trends 
-##### 5. a. ) 
+**5. a. )** 
 ```python
 # Use the syntax groupby in order to Group the data by released_year and count the number of tracks
 Yearly_Tracks = new_df.groupby('released_year').size().reset_index(name = 'track_count') 
@@ -245,7 +245,7 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/1571ee41-a092-4a1b-91d9-b388bd204b6c)
 
-##### 5. b. ) 
+**5. b. )** 
 ```python
 # Use the syntax groupby in order to Group the data by released_year and count the number of tracks
 Monthly_Tracks = new_df.groupby('released_month').size().reset_index(name = 'track_count') 
@@ -262,7 +262,7 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/415346aa-ffa7-49ac-8780-977324a408a4)
 
 ## Phase 6: Genre and Music Characteristics 
-##### 6. a. ) 
+**6. a. )** 
 ```python
 #
 Correlated_Columns = ['streams', 'bpm', 'danceability_%', 
@@ -292,7 +292,7 @@ print(Correlation_Table)
 ![image](https://github.com/user-attachments/assets/1d9935df-daf3-4fc6-b54a-ae26243ac52e)
 ![image](https://github.com/user-attachments/assets/3bc8d05b-d02d-4ce7-9d0e-306617f0f3c1)
 
-##### 6. b. ) 
+**6. b. )**
 ```python
 danceenergy_corr = Correlation_Stats.loc['danceability_%', 'energy_%']
 valenceacoustic_corr = Correlation_Stats.loc['valence_%', 'acousticness_%']
@@ -318,7 +318,7 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/8944b689-825e-46d6-b18e-5335e4be7704)
 
 ## Phase 7: Platform Popularity 
-##### 7. a. ) 
+**7. a. )** 
 ```python
 # Filters out the platform columns, applies summation, and stores it in their respective variables 
 sum_spotplay = new_df['in_spotify_playlists'].sum() 
@@ -356,7 +356,7 @@ Playlist_Data
 ![image](https://github.com/user-attachments/assets/7bc35d13-066a-419b-9a90-9a1538a9e87e)
 
 ## Phase 8: Advanced Analysis
-##### 8. a. ) 
+**8. a. )** 
 
 ## Revision Timeline 
 ### Version 0.1 - 10/30/2024 
