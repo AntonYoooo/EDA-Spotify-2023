@@ -42,7 +42,8 @@ df_DT
 ### Output: 
 ![image](https://github.com/user-attachments/assets/8307e5ef-caa7-41cf-a31b-431571e9135b)
 
-**• Note: It can be observed that some of the columns in the dataset such as streams, in_deezer_playlists, and in_shazam charts are declared as "object", in which they should be numeric since they're values are numerical.**
+**Note:** It can be observed that some of the columns in the dataset such as streams, in_deezer_playlists, and in_shazam charts are declared as "object", in which they should be numeric since they're values are numerical.
+<br> 
 
 **1 . d . )  After checking out the data types, we then now proceed in checking whether incomplete elements or duplicates are present within the dataset.** 
 ```python
@@ -62,6 +63,7 @@ print("The Amount of Tracks with a duplicate are:", Duplicates)
 ![image](https://github.com/user-attachments/assets/95e04788-4574-4f14-84bd-881a41723106)
 
 **Note:** According to the output, there are 50 blanks in the "in_shazam_charts" column and 95 blanks in the "key" column. Additionally, there are currently 4 tracks that have been duplicated within the dataset. 
+<br> 
 
 **1 . e . ) To further prove that there are duplicates within the track, the following code is then implemented:** 
 ```python
@@ -100,7 +102,8 @@ new_df
 ### Output: 
 ![image](https://github.com/user-attachments/assets/3f916836-b2ba-4d2a-98da-55afcb64eede)
 
-**• Note: After cleaning the data, we are then left with 813 rows and 24 columns.** 
+**Note:** After cleaning the data, we are then left with 813 rows and 24 columns. 
+<br>
 
 ## Phase 3: Basic Descriptive Statistics 
 For this part, we will be applying basic descriptive statistics on the stream, released_year, and artist_count columns in order to effectively visualize and define the data. 
@@ -126,7 +129,8 @@ table_m
 ### Output: 
 ![image](https://github.com/user-attachments/assets/fddc801a-e3db-4b06-8d49-6726b6f62c0f)
 
-**• Note: Upon further inspection, it is noticeable that total tracks being 813, possesses an average stream of 4.68e+08 (~468 million), standard deviation of 5.23e+08 (~523 million), and a median of 2.63+e08 (~263 million).** 
+**Note:** Upon further inspection, it is noticeable that total tracks being 813, possesses an average stream of 4.68e+08 (~468 million), standard deviation of 5.23e+08 (~523 million), and a median of 2.63+e08 (~263 million).
+<br> 
 
 **3 . b . ) After performing descriptive statistics on the stream column, we then now proceed with the distribution on the column "released_year, formulated via the codeblock:**
 ```python
@@ -163,7 +167,8 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/edc3793c-5ff9-4c15-8432-6afc15c231c1)
 
-**• Note: In determining the distribution, a histogram plot was created in order to create a "face" or a visual representation of the data procured. It can be noticed that upon reaching the years 2019 to 2023, the bar had a sudden spike, indicating that most of the top tracks found in the list possesses a release date within the range. Additionally, it can also be noticed that the 2 boundaries, Lower Bound and Upper Bound, indicate the range of data that considers a data as an "inlier" while anything that is beyond or before that are outliers.** 
+**Note:** In determining the distribution, a histogram plot was created in order to create a "face" or a visual representation of the data procured. It can be noticed that upon reaching the years 2019 to 2023, the bar had a sudden spike, indicating that most of the top tracks found in the list possesses a release date within the range. Additionally, it can also be noticed that the 2 boundaries, Lower Bound and Upper Bound, indicate the range of data that considers a data as an "inlier" while anything that is beyond or before that are outliers.
+<br> 
 
 **3. c. ) We then now apply the same statistical treatment to the column "artist_count"** 
 ```python
@@ -199,7 +204,8 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/8d36c24e-72d2-445c-85a6-0a61b9d0a864)
 
-**• Note: Based on the data shown above, it can be observed that the highest number of artist count(s) when it comes to creating tracks are singular, while other counts are distributed to the values 2, 3, 4, 5. Similar to the previous data, an Upper Bound and Lower Bound was calculated and formulated in which the LB comprises a value of -0.5, indicating that there are no lower outliers, since having an artist count that is equal or less than 0 is impossible. On the other hand, the upper bound is found at a value of 3.5, suggesting that most of the artist count fall within the range of 1 to 3.** 
+**Note:** Based on the data shown above, it can be observed that the highest number of artist count(s) when it comes to creating tracks are singular, while other counts are distributed to the values 2, 3, 4, 5. Similar to the previous data, an Upper Bound and Lower Bound was calculated and formulated in which the LB comprises a value of -0.5, indicating that there are no lower outliers, since having an artist count that is equal or less than 0 is impossible. On the other hand, the upper bound is found at a value of 3.5, suggesting that most of the artist count fall within the range of 1 to 3.
+<br>
 
 ## Phase 4: Top Performers 
 For this part, we will be sorting out the top 5 tracks with the highest streams and the top 5 artists with the most number of tracks featured in the top spotify list
@@ -214,7 +220,8 @@ table_streams
 ### Output: 
 ![image](https://github.com/user-attachments/assets/fe6fdc85-e58e-4122-8c80-5111f0c37e8a)
 
-**• Note: The track with the highest streams is (1) Shape of you by Ed Sheeran, followed with (2) Sunflower by Post Malone and Swae Lee, (3) One Dance by Drake, Wizkid and Kyla, (4) Stay by Justin Bieber and Kid Laroi, and (5) Believer by Imagine Dragons.** 
+**Note:** The track with the highest streams is (1) Shape of you by Ed Sheeran, followed with (2) Sunflower by Post Malone and Swae Lee, (3) One Dance by Drake, Wizkid and Kyla, (4) Stay by Justin Bieber and Kid Laroi, and (5) Believer by Imagine Dragons.
+<br>
 
 
 **4. b. ) Next, we determine the top performers based on the amount of times a song of theirs were included in the top spotify list.** 
@@ -237,7 +244,8 @@ table_frequency
 ### Output: 
 ![image](https://github.com/user-attachments/assets/3dd75c26-5a82-43d1-983c-7fa4151a2ac4)
 
-**• Note: The Artist with the highest number of tracks is (36)Bad Bunny, followed by (32)Taylor Swift, (26)The Weeknd, (23)Kendrick Lamar, and (21)Feid.** 
+**Note:** The Artist with the highest number of tracks is (36)Bad Bunny, followed by (32)Taylor Swift, (26)The Weeknd, (23)Kendrick Lamar, and (21)Feid. 
+<br>
 
 ## Phase 5: Temporal Trends 
 For this part, we will be analyzing the trends in the number of tracks released based on both years and months in order to see patterns or fluctuations when it comes to release schedule.
@@ -263,7 +271,8 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/1571ee41-a092-4a1b-91d9-b388bd204b6c)
 
-**• Note: Similarly with the analysis presented on 3.b., the release year of the majority of the tracks can be found in between the range of 2019 to 2023.**
+**Note:** Similarly with the analysis presented on 3.b., the release year of the majority of the tracks can be found in between the range of 2019 to 2023.
+<br>
 
 **5. b. ) Next is plotting the tracks based on months. Seaborn's histogram will again be utilized here.** 
 ```python
@@ -281,7 +290,8 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/415346aa-ffa7-49ac-8780-977324a408a4)
 
-**• Note: It can be noticed that the month with the most releases is the 1st (January) and 5th (May) month while the least release is on the 8th (August) month. Possible reasons as to why January and May see the most release is due to the fact that January indicates the start of a new year while May is the kickstart of summer and festivals. As for August, the lower number of releases may be correlated to the fact that this month is the end of summer, when activities tend to die down.**
+**Note:** It can be noticed that the month with the most releases is the 1st (January) and 5th (May) month while the least release is on the 8th (August) month. Possible reasons as to why January and May see the most release is due to the fact that January indicates the start of a new year while May is the kickstart of summer and festivals. As for August, the lower number of releases may be correlated to the fact that this month is the end of summer, when activities tend to die down.
+<br>
 
 ## Phase 6: Genre and Music Characteristics 
 For this part, the correlation between streams and various musical attributes are examined in order to identify which among the attributes have the most impact on the stream column 
@@ -315,7 +325,8 @@ print(Correlation_Table)
 ![image](https://github.com/user-attachments/assets/1d9935df-daf3-4fc6-b54a-ae26243ac52e)
 ![image](https://github.com/user-attachments/assets/3bc8d05b-d02d-4ce7-9d0e-306617f0f3c1)
 
-**• Note: Based on the heatmap provided, all attributes seem to have weak negative correlations with the stream column, indicating that there is a minimal impact on their inverse relationship. To conclude, the largest correlation present is the speechiness, possessing a -0.1 coefficient while the weakest would be acousticness, being -0.005.**
+**Note:** Based on the heatmap provided, all attributes seem to have weak negative correlations with the stream column, indicating that there is a minimal impact on their inverse relationship. To conclude, the largest correlation present is the speechiness, possessing a -0.1 coefficient while the weakest would be acousticness, being -0.005.
+<br>
 
 **6. b. ) After determining the correlation values of each, we'll then closely examine the correlational values on the attributes "danceability" and "energy", and "valence" and "acousticness".**
 ```python
@@ -342,7 +353,8 @@ plt.show()
 ### Output: 
 ![image](https://github.com/user-attachments/assets/8944b689-825e-46d6-b18e-5335e4be7704)
 
-**• Note: Upon examination, it can be concluded that danceability and energy possesses a weak positive correlation, indicating a direct relationship. As for the correlation between valence and acousticness, it possesses a value of -0.062, indicating a very weak negative correlation or weak inverse relationship.**
+**Note:** Upon examination, it can be concluded that danceability and energy possesses a weak positive correlation, indicating a direct relationship. As for the correlation between valence and acousticness, it possesses a value of -0.062, indicating a very weak negative correlation or weak inverse relationship.
+<br> 
 
 ## Phase 7: Platform Popularity 
 For this part, we will be analyzing and comparing the number of tracks that appear in spotify_playlists, apple_playlists, and deezer_playlists in order to see which platform is the most favorable. 
@@ -383,7 +395,8 @@ Playlist_Data
 ### Output: 
 ![image](https://github.com/user-attachments/assets/7bc35d13-066a-419b-9a90-9a1538a9e87e)
 
-**• Note: As seen in the pie chart, Spotify Playlists dominate with a percentage of 97.1% of the total playlist, amounting to 3,953,504 counts, while the 1.7% or ~2% goes to the Deezer Playlists with a count of 69,618. Finally, the remaining 1.2% or ~1% goes to Apple Playlist with a count totalling up to 48,719.**
+**Note:** As seen in the pie chart, Spotify Playlists dominate with a percentage of 97.1% of the total playlist, amounting to 3,953,504 counts, while the 1.7% or ~2% goes to the Deezer Playlists with a count of 69,618. Finally, the remaining 1.2% or ~1% goes to Apple Playlist with a count totalling up to 48,719.**
+<br> 
 
 ## Phase 8: Advanced Analysis
 **8. a. )** 
