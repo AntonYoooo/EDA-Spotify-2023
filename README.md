@@ -27,11 +27,12 @@ df
 ```
 
 ### Output: 
-<div align="center">
-![image](https://github.com/user-attachments/assets/2f0666ef-9b40-436d-acb7-7288bc7a71f5)
-</div>
 
+![image](https://github.com/user-attachments/assets/2f0666ef-9b40-436d-acb7-7288bc7a71f5)
+
+<div align="center">
 Note: In the image provided, there are a total of 953 rows and 24 columns. 
+</div>
 
 **1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the datatypes between the columns through this code:** 
 ```python 
