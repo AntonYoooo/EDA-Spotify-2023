@@ -30,9 +30,7 @@ df
 
 ![image](https://github.com/user-attachments/assets/2f0666ef-9b40-436d-acb7-7288bc7a71f5)
 
-<div align="center">
-Note: In the image provided, there are a total of 953 rows and 24 columns. 
-</div>
+**Note:** In the image provided, there are a total of 953 rows and 24 columns. 
 <br> 
 
 **1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the datatypes between the columns through this code:** 
@@ -63,7 +61,7 @@ print("The Amount of Tracks with a duplicate are:", Duplicates)
 ### Output: 
 ![image](https://github.com/user-attachments/assets/95e04788-4574-4f14-84bd-881a41723106)
 
-**• Note: According to the output, there are 50 blanks in the "in_shazam_charts" column and 95 blanks in the "key" column. Additionally, there are currently 4 tracks that have been duplicated within the dataset.** 
+**Note:** According to the output, there are 50 blanks in the "in_shazam_charts" column and 95 blanks in the "key" column. Additionally, there are currently 4 tracks that have been duplicated within the dataset. 
 
 **1 . e . ) To further prove that there are duplicates within the track, the following code is then implemented:** 
 ```python
