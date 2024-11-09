@@ -228,7 +228,7 @@ table_streams = pd.DataFrame({'Artist(s)': x['artist(s)_name'], 'Track Name': x[
 table_streams
 ```
 ### Output: 
-![image](https://github.com/user-attachments/assets/fe6fdc85-e58e-4122-8c80-5111f0c37e8a)
+![image](https://github.com/user-attachments/assets/24ff19c7-91b7-4564-9ed1-8bf5a53df6ff)
 
 **Note:** The track with the highest streams is (1) Shape of you by Ed Sheeran, followed with (2) Sunflower by Post Malone and Swae Lee, (3) One Dance by Drake, Wizkid and Kyla, (4) Stay by Justin Bieber and Kid Laroi, and (5) Believer by Imagine Dragons.
 <br>
@@ -541,25 +541,100 @@ plt.show()
 **Note:** In here, we notice that one of the top 10 Artists seems to be in garbage values. However, in reality, this is an encoding error that took place from the excel itself. The artist name should be "Tiësto" but was written as "Tiï¿½ï¿½sto" in the excel/datafile itself. This is not a data error but a formatting issue. Other than that, the data itself should be consistent. Thus, the top 10 artist by total playlist should be (1) The Weeknd, (2) Taylor Swift, (3) SZA, (4) Bad Bunny, (5) Grupo Frontera, (6) Eminem, (7) Tiësto, (8) Travis Scott, (9) Metro Boomin, and (10) Junior
 <br> 
 
+## Conclusion 
+In conclusion, the applied analysis provided valuable insights that aided us into understanding the different factors as to what makes a track popular on a streaming platform. Listeners showed a preference for recent releases rather than old releases, specifically from years 2019 to 2023. Additionally, most of the tracks located within the dataset had 1 to 3 artists in average, suggesting that most songs are usually created by solo or small groups. In terms of platform popularity, spotify remains dominant over the others as it is one of the most influential musical platforms to have ever existed within the digital age. One of the more interesting findings was the fact that most people also preferred having major/minor keys such as C#, indicating the current trend for keys. The release month tracks also showed a pattern where most releases occur in January and May, indicating the high activity within the months either due to summer or celebration of the new year. All in all, these findings suggest that following certain trends is the ultimate key for artists in maximizing the potential of their songs to become one of the greatest hits. 
 
 ## Summary
-#### Phase 1 
-- 
-#### Phase 2 
-#### Phase 3 
-#### Phase 4 
-#### Phase 5 
-#### Phase 6 
-#### Phase 7 
-#### Phase 8 
+#### Phase 1: Start + Identifying/Analyzing the Initial Dataset 
+▸ Imported Essential Libraries  
+<br>
+▸ Changed encoding to latin 1 in order to access the Datafile
+<br>
+▸ Checked the DataTypes and any form of potential liabilities such as incomplete elements, duplicates, etc. 
+<br>
+#### Phase 2: Data Cleaning
+▸ Dropped all rows with Garbage values within the dataset 
+<br>
+▸ Turned columns 'stream', 'in_deezer_playlist', and 'in_shazam_charts' into numeric 
+<br>
+#### Phase 3: Basic Descriptive Statistics 
+▸ Performed Descriptive Statistics on the stream column 
+<br>
+▸ Plotted and visualized the Release Year and Artist Count(s) of the Tracks in the dataset  
+<br>
+#### Phase 4: Top Performers 
+▸ Determined the tracks with the highest streams
+<br>
+▸ Determined the artist with the highest number of tracks in the dataset
+<br>
+#### Phase 5: Temporal Trends
+▸ Plotted the Tracks Released Per Year with analysis
+<br>
+▸ Plotted the Tracks Released Per Month with analysis  
+<br>
+#### Phase 6: Genre and Music Characteristics 
+▸ Created a heatmap that correlated the stream column and musical attributes
+<br>
+▸ Created a 1X1 heatmap for the correlation of Energy and Danceability 
+<br>
+▸ Created another 1X1 heatmap for the correlation of Valence and Acousticness 
+<br>
+#### Phase 7: Platform Popularity 
+▸ Created a pie chart to visualize the percentage of the platforms
+<br>
+▸ Created a dataframe that shows the exact values 
+<br>
+#### Phase 8: Advanced Analysis 
+▸ Created bar graph to visualize key streams (Major and Minor) 
+<br>
+▸ Created bar graph for the top 10 artists based on chart frequency
+<br>
+▸ Created bar graph for the top 10 artists by total playlist  
 
 ## Author(s) 
   ▸ Darren Gaerlan 
+
+## Reference(s) 
+1.) https://stackoverflow.com/questions/18171739/unicodedecodeerror-when-reading-csv-file-in-pandas (For Windows) 
+<br>
+2.) https://stackoverflow.com/questions/68922339/how-to-solve-dataframe-to-numeric-error-python
+<br>
+3.) https://stackoverflow.com/questions/44548721/remove-row-with-null-value-from-pandas-data-frame
+<br>
+4.) https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
+<br>
+5.) https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf 
+<br>
+6.) https://www.datacamp.com/tutorial/seaborn-heatmaps
+<br>
+7.) https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html
+<br>
+8.) https://music3point0.com/2020/01/09/best-months-new-music/
+<br>
+9.) https://seaborn.pydata.org/tutorial/color_palettes.html
+<br>
+10.) https://stackoverflow.com/questions/21572870/percent-label-position-in-pie-chart
+<br>
+11.) https://www.w3schools.com/python/ref_list_copy.asp 
+<br>
 
 ## Revision Timeline 
 ### Version 0.1 - 10/30/2024 
   ▸ Creation of Repository 
 ### Version 0.2 - 11/7/2024 
   ▸ Updated Repository by Adding a Brief Outline and Goal 
+  ▸ Continued finishing the code 
 ### Version 0.3 - 11/8/2024
-  ▸ Updated Repository by Adding 
+  ▸ Updated Repository by Adding Phases 1 - 7  
+  ▸ Added the codes within Phases 1-7
+  ▸ Added the output of phases 1-7 
+### Version 0.4 - 11/9/2024 
+  ▸ Finished the remaining phase 8 
+  ▸ Added comments/notes/explanation for the different codes
+  ▸ Added the analysis and explanation of the visuals/dataframes 
+  ▸ Added Reference(s)
+  ▸ Added Author 
+  ▸ Added a summary which summarizes what took place 
+  ▸ Further Revised and reviewed the code to ensure accuracy and consistency 
+  
+
