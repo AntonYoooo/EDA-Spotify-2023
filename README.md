@@ -33,9 +33,7 @@ df
 <div align="center">
 Note: In the image provided, there are a total of 953 rows and 24 columns. 
 </div>
-
-
-
+<br> 
 
 **1 . c . ) Now that the dataset is accessed, it will then undergo a process of checking before performing data analysis. First, we investigate the datatypes between the columns through this code:** 
 ```python 
