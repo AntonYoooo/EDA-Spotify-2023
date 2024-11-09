@@ -547,48 +547,48 @@ In conclusion, the applied analysis provided valuable insights that aided us int
 ## Summary
 #### Phase 1: Start + Identifying/Analyzing the Initial Dataset 
 ▸ Imported Essential Libraries  
-<br>
+
 ▸ Changed encoding to latin 1 in order to access the Datafile
-<br>
+
 ▸ Checked the DataTypes and any form of potential liabilities such as incomplete elements, duplicates, etc. 
-<br>
+
 #### Phase 2: Data Cleaning
 ▸ Dropped all rows with Garbage values within the dataset 
-<br>
+
 ▸ Turned columns 'stream', 'in_deezer_playlist', and 'in_shazam_charts' into numeric 
-<br>
+
 #### Phase 3: Basic Descriptive Statistics 
 ▸ Performed Descriptive Statistics on the stream column 
-<br>
+
 ▸ Plotted and visualized the Release Year and Artist Count(s) of the Tracks in the dataset  
-<br>
+
 #### Phase 4: Top Performers 
 ▸ Determined the tracks with the highest streams
-<br>
+
 ▸ Determined the artist with the highest number of tracks in the dataset
-<br>
+
 #### Phase 5: Temporal Trends
 ▸ Plotted the Tracks Released Per Year with analysis
-<br>
+
 ▸ Plotted the Tracks Released Per Month with analysis  
-<br>
+
 #### Phase 6: Genre and Music Characteristics 
 ▸ Created a heatmap that correlated the stream column and musical attributes
-<br>
+
 ▸ Created a 1X1 heatmap for the correlation of Energy and Danceability 
-<br>
+
 ▸ Created another 1X1 heatmap for the correlation of Valence and Acousticness 
-<br>
+
 #### Phase 7: Platform Popularity 
 ▸ Created a pie chart to visualize the percentage of the platforms
-<br>
+
 ▸ Created a dataframe that shows the exact values 
-<br>
+
 #### Phase 8: Advanced Analysis 
 ▸ Created bar graph to visualize key streams (Major and Minor) 
-<br>
+
 ▸ Created bar graph for the top 10 artists based on chart frequency
-<br>
+
 ▸ Created bar graph for the top 10 artists by total playlist  
 
 ## Author(s) 
@@ -596,45 +596,58 @@ In conclusion, the applied analysis provided valuable insights that aided us int
 
 ## Reference(s) 
 1.) https://stackoverflow.com/questions/18171739/unicodedecodeerror-when-reading-csv-file-in-pandas (For Windows) 
-<br>
+
 2.) https://stackoverflow.com/questions/68922339/how-to-solve-dataframe-to-numeric-error-python
-<br>
+
 3.) https://stackoverflow.com/questions/44548721/remove-row-with-null-value-from-pandas-data-frame
-<br>
+
 4.) https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
-<br>
+
 5.) https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf 
-<br>
+
 6.) https://www.datacamp.com/tutorial/seaborn-heatmaps
-<br>
+
 7.) https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html
-<br>
+
 8.) https://music3point0.com/2020/01/09/best-months-new-music/
-<br>
+
 9.) https://seaborn.pydata.org/tutorial/color_palettes.html
-<br>
+
 10.) https://stackoverflow.com/questions/21572870/percent-label-position-in-pie-chart
-<br>
+
 11.) https://www.w3schools.com/python/ref_list_copy.asp 
-<br>
+
 
 ## Revision Timeline 
 ### Version 0.1 - 10/30/2024 
   ▸ Creation of Repository 
 ### Version 0.2 - 11/7/2024 
   ▸ Updated Repository by Adding a Brief Outline and Goal 
+  
   ▸ Continued finishing the code 
+  
 ### Version 0.3 - 11/8/2024
   ▸ Updated Repository by Adding Phases 1 - 7  
+  
   ▸ Added the codes within Phases 1-7
+  
   ▸ Added the output of phases 1-7 
+  
 ### Version 0.4 - 11/9/2024 
   ▸ Finished the remaining phase 8 
+  
   ▸ Added comments/notes/explanation for the different codes
+  
   ▸ Added the analysis and explanation of the visuals/dataframes 
+  
   ▸ Added Reference(s)
+  
   ▸ Added Author 
+  
   ▸ Added a summary which summarizes what took place 
+  
   ▸ Further Revised and reviewed the code to ensure accuracy and consistency 
+  
   ▸ Uploaded the csv file and ipynb file 
+  
 
