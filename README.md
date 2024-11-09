@@ -124,7 +124,9 @@ table_m
 ### Output: 
 ![image](https://github.com/user-attachments/assets/fddc801a-e3db-4b06-8d49-6726b6f62c0f)
 
+<p align="justify">
 **• Note: Upon further inspection, it is noticeable that total tracks being 813, possesses an average stream of 4.68e+08 (~468 million), standard deviation of 5.23e+08 (~523 million), and a median of 2.63+e08 (~263 million).** 
+</p>
 
 **3 . b . ) After performing descriptive statistics on the stream column, we then now proceed with the distribution on the column "released_year, formulated via the codeblock:**
 ```python
