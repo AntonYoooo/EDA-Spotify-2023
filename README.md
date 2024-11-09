@@ -168,7 +168,8 @@ plt.legend()
 plt.show() 
 ```
 ### Output: 
-![image](https://github.com/user-attachments/assets/edc3793c-5ff9-4c15-8432-6afc15c231c1)
+![image](https://github.com/user-attachments/assets/2a07f0c7-b169-4900-abc8-abff761807f5)
+
 
 **Note:** In determining the distribution, a histogram plot was created in order to create a "face" or a visual representation of the data procured. It can be noticed that upon reaching the years 2019 to 2023, the bar had a sudden spike, indicating that most of the top tracks found in the list possesses a release date within the range. Additionally, it can also be noticed that the 2 boundaries, Lower Bound and Upper Bound, indicate the range of data that considers a data as an "inlier" while anything that is beyond or before that are outliers.
 <br> 
@@ -207,7 +208,7 @@ plt.legend()
 plt.show() 
 ```
 ### Output: 
-![image](https://github.com/user-attachments/assets/8d36c24e-72d2-445c-85a6-0a61b9d0a864)
+![image](https://github.com/user-attachments/assets/a7e9ac6c-e2b0-41b4-8a35-dfb82c9c2ca5)
 
 **Note:** Based on the data shown above, it can be observed that the highest number of artist count(s) when it comes to creating tracks are singular, while other counts are distributed to the values 2, 3, 4, 5. Similar to the previous data, an Upper Bound and Lower Bound was calculated and formulated in which the LB comprises a value of -0.5, indicating that there are no lower outliers, since having an artist count that is equal or less than 0 is impossible. On the other hand, the upper bound is found at a value of 3.5, suggesting that most of the artist count fall within the range of 1 to 3.
 <br>
